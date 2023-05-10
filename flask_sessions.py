@@ -1,7 +1,7 @@
 import os
-from flask import session
+from flask import session # se supone que Flask ya se ha instalado en el proyecto
 
-from config.config import flask_cfg
+from config import flask_cfg
 
 secret_key = os.urandom(64)
 
