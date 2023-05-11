@@ -7,9 +7,13 @@ secret_key = os.urandom(64)
 
 def apply_sessions(app):
     '''
-    Aplica a una aplicación de Flask la capacidad de tener sesiones
+    Aplica a una aplicación de Flask la capacidad de tener sesiones.
+    Debe usarse con un exec en el script de la aplicación:
+    
+    exec(apply_sessions(app))
     '''
     app.secret_key = secret_key
+    return "from flask import session"
 
 def get_secret_key(app):
     '''
